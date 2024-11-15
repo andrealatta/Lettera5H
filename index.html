@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lettera di Novembre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .letter {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #e74c3c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lettera del Professore</h1>
+    
+    <div class="letter" id="letter">
+        <p>
+            Cari studenti della quinta, <br><br>
+            È con grande rammarico che devo scrivervi questa lettera. Ieri, durante la lezione di Git, che avevo preparato con tanta cura, non vi ho visto presenti in massa come mi aspettavo. Vi avevo promesso una lezione speciale, ricca di esempi pratici e curiosità, ma in molti avete scelto di non partecipare. 
+            <br><br>
+            Git è uno degli strumenti più potenti per il nostro lavoro e, nonostante l'entusiasmo con cui cerco di rendere ogni lezione interessante, vedo che molti di voi non vi stanno impegnando come dovreste. 
+            <br><br>
+            Non posso fare altro che sperare che nella prossima occasione vi facciate trovare pronti, per non perdere l'opportunità di imparare qualcosa di davvero utile per il futuro.
+            <br><br>
+            Il vostro professore,
+            <br>
+            Filippo
+        </p>
+    </div>
+
+    <div class="button-container">
+        <button onclick="enlargeText()">Ingrandisci la Lamentela</button>
+    </div>
+
+    <script>
+        function enlargeText() {
+            var letter = document.getElementById('letter');
+            var currentSize = window.getComputedStyle(letter, null).getPropertyValue('font-size');
+            var newSize = parseFloat(currentSize) * 1.2; // Aumenta la dimensione del font del 20%
+            letter.style.fontSize = newSize + 'px';
+        }
+    </script>
+    
+</body>
+</html>
